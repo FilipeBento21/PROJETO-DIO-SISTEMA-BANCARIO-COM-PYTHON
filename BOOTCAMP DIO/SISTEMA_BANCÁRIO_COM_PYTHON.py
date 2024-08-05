@@ -38,11 +38,13 @@ while True:
         if deposito > 0:
             saldo += deposito;
             extrato += f"Depósito Realizado ! Valor de Depósito: R${deposito:2.2f}\n"
-            print(f"""\n
-                  Deposito Realizado!
+            print(f"""\n                  =============================
                   
-                  Saldo Atual: R${saldo:1.2f}
-                  """);
+                       Deposito Realizado!
+                  
+                     Saldo Atual: R${saldo:1.2f}
+
+                  =============================""");
 
         else:
             print("Operação falhou, favor Tentar novamente !");
@@ -74,12 +76,13 @@ while True:
             saldo -= saque
             extrato += f"Saque realizado, valor sacado: R${saque:1.2f}\n"
             numero_saques += 1;
-            print(f"""\n=============================
-                  Saque Realizado !!
+            print(f"""\n                  =============================
                   
-                  Saldo Atual: R${saldo:1.2f}
+                      Saque Realizado !!
                   
-                  ===========================""");
+                    Saldo Atual: R${saldo:1.2f}
+                  
+                  =============================""");
 
         else:         
             print("Operação falhou, o valor digitado é Invalido !")
