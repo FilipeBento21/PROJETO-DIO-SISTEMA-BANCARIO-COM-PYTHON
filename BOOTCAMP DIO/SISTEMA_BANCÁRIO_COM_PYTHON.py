@@ -38,7 +38,7 @@ while True:
         if deposito > 0:
             saldo += deposito;
             extrato += f"Depósito Realizado ! Valor de Depósito: R${deposito:2.2f}\n"
-            print(f"""
+            print(f"""\n
                   Deposito Realizado!
                   
                   Saldo Atual: R${saldo:1.2f}
@@ -60,7 +60,17 @@ while True:
         valor_invalido = saque < 0;
         
 
-        if saque > 0:
+        if excedeu_saldo:
+            print("Operação falhou, você não possui saldo o suficiente !");
+
+        elif excedeu_limite:
+            print("Operação falhou, Valor maior que o valor limite permitido !");
+
+        elif excedeu_saques:
+            print("Operação falhou, número de saques máximo Atingido !")
+
+        #Condição principal da opção, porém para executar essa condição se é necessário não se encaixar em nenhuma das alternativas incorretas!!
+        elif saque > 0:
             saldo -= saque
             extrato += f"Saque realizado, valor sacado: R${saque:1.2f}\n"
             numero_saques += 1;
@@ -70,15 +80,6 @@ while True:
                   Saldo Atual: R${saldo:1.2f}
                   
                   ===========================""");
-
-        elif excedeu_saldo:
-            print("Operação falhou, você não possui saldo o suficiente !");
-
-        elif excedeu_limite:
-            print("Operação falhou, Valor maior que o valor limite permitido !");
-
-        elif excedeu_saques:
-            print("Operação falhou, número de saques máximo Atingido !")
 
         else:         
             print("Operação falhou, o valor digitado é Invalido !")
