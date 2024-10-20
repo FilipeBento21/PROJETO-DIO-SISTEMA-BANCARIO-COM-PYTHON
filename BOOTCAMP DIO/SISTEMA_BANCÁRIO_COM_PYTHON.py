@@ -26,11 +26,11 @@ def main():
             saldo, extrato = func_deposito(saldo, valor, extrato);
 
         elif opcao == "2":
-            valor = float(input("Informe o Valor do Saque: "));
+            valor_de_saque = float(input("Informe o Valor do Saque: "));
     
             saldo, extrato = func_saque(
                 saldo=saldo,
-                valor=valor,
+                valor_de_saque=valor_de_saque,
                 extrato=extrato,
                 limite=limite,
                 numero_saques=numero_saques,
@@ -93,9 +93,9 @@ def func_deposito(saldo, valor_de_posito, extrato, /):
 #variáreis definidas com as operações necessárias para as condições da nossa 2º opção do while;
 
 
-def func_saque(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
-    excedeu_saldo = valor > saldo
-    excedeu_limite = valor > limite;
+def func_saque(*, saldo, valor_de_saque, extrato, limite, numero_saques, limite_saques):
+    excedeu_saldo = valor_de_saque > saldo
+    excedeu_limite = valor_de_saque > limite;
     excedeu_saques = numero_saques >= limite_saques
 
     if excedeu_saldo:
@@ -107,9 +107,9 @@ def func_saque(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
     elif excedeu_saques:
         print("\n@@@ Operação Falhou, Foi excedido o número de Saque Permitido ! @@@");
 
-    elif valor > 0:
-        saldo -= valor
-        extrato += f"Saque:\t\tR$ {valor:.2f}\n"
+    elif valor_de_saque > 0:
+        saldo -= valor_de_saque
+        extrato += f"Saque:\t\tR$ {valor_de_saque:.2f}\n"
         numero_saques += 1
         print("\n Saque Realizado com Sucesso ! ");
  
