@@ -1,4 +1,4 @@
-#Começando com o Menu qe será exibido para o usuário:
+#Começando com o Menu que será exibido para o usuário:
 
 import textwrap;
 
@@ -36,6 +36,10 @@ def main():
                 numero_saques=numero_saques,
                 limite_saques=LIMITE_SAQUES,
             );
+        
+        elif opcao == "3":
+            extrato = func_extrato(saldo, extrato=extrato);
+
     else:
         print("Operação Falhou, Favor tentar novamente !");
 
@@ -79,24 +83,18 @@ def func_deposito(saldo, valor_de_posito, extrato, /):
 
     opcao = menu();
 
+def func_extrato(saldo, /, *, extrato):
 
-
-#condições pos trás das opções oferecidas para o usuário no menu
-
-
-#    else:
-#            print("Operação falhou, favor Tentar novamente !");
-
-#    elif opcao == "2":
-#        saque = float(input("Informe O Valor Do Saque: "))
-
-#variáreis definidas com as operações necessárias para as condições da nossa 2º opção do while;
+    print( "\n===============Vizualizar Extrato ================");
+    print("Não foram Realizadas Movimentações" if not extrato else extrato);
+    print(f"\n Saldo: R${saldo:1.2f}");
+    print("==================================================")
 
 
 def func_saque(*, saldo, valor_de_saque, extrato, limite, numero_saques, limite_saques):
     excedeu_saldo = valor_de_saque > saldo
     excedeu_limite = valor_de_saque > limite;
-    excedeu_saques = numero_saques >= limite_saques
+    excedeu_saques = numero_saques >= limite_saques;
 
     if excedeu_saldo:
         print("\n@@@ Operação Falhou, Sua Conta não Possui Saldo Suficiente Para realizar o Saque ! @@@");
