@@ -83,14 +83,6 @@ def func_deposito(saldo, valor_de_posito, extrato, /):
 
     opcao = menu();
 
-def func_extrato(saldo, /, *, extrato):
-
-    print( "\n===============Vizualizar Extrato ================");
-    print("Não foram Realizadas Movimentações" if not extrato else extrato);
-    print(f"\n Saldo: R${saldo:1.2f}");
-    print("==================================================")
-
-
 def func_saque(*, saldo, valor_de_saque, extrato, limite, numero_saques, limite_saques):
     excedeu_saldo = valor_de_saque > saldo
     excedeu_limite = valor_de_saque > limite;
@@ -115,6 +107,16 @@ def func_saque(*, saldo, valor_de_saque, extrato, limite, numero_saques, limite_
         print("\n@@@ Operação Falhou, O Valor Informado é Invalido ! @@@");
 
     return saldo, extrato
+
+def func_extrato(saldo, /, *, extrato):
+
+    print( "\n===============Vizualizar Extrato ================");
+    print("Não foram Realizadas Movimentações" if not extrato else extrato);
+    print(f"\n Saldo: R${saldo:1.2f}");
+    print("==================================================")
+
+def novo_usuario():
+
 
 
 main()
