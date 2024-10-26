@@ -15,6 +15,7 @@ def main():
     numero_saques = 0;
     usuarios = [];
     contas = [];
+    numero_conta = 0;
     
     
     while True:
@@ -148,6 +149,15 @@ def filtrar_usuario(cpf,usuarios):
     usuarios_filtrados = [usuario for usuario in usuarios if usuario["cpf"] == cpf]
     return usuarios_filtrados[0] if usuarios_filtrados else None
 
+def nova_conta(AGENCIA, numero_conta, usuarios):
+    cpf = input("Informe seu CPF: ");
+    usuario = filtrar_usuario(cpf, usuarios);
+
+    if usuario:
+        print("\n Conta criada com sucesso !");
+        return {"agencia": AGENCIA, "número da conta": numero_conta, "usuário": usuario};
+
+    print("\n Usuário não encontado, Encerrando Processo de Criação;")
 
 
 main()
