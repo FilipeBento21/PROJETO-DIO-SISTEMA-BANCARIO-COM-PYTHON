@@ -43,30 +43,25 @@ def func_deposito(saldo, valor_de_posito, extrato, /):
 
     opcao = menu();
 
-def func_saque(*, saldo, valor_de_saque, extrato, limite, numero_saques):
+def func_saque(*, saldo, valor_de_saque, extrato, limite, numero_saques, limite_saques):
     excedeu_saldo = valor_de_saque > saldo
     excedeu_limite = valor_de_saque > limite;
-    excedeu_saques = numero_saques["2"] == True;                  
-
-
-    if excedeu_saques:
-        print("\n@@@ Operação Falhou, Foi excedido o número de Saque Permitido ! @@@");
+    excedeu_saques = numero_saques >= limite_saques
     
-    
-    elif excedeu_saldo:
+    if excedeu_saldo:
         print("\n@@@ Operação Falhou, Sua Conta não Possui Saldo Suficiente Para realizar o Saque ! @@@");
 
     elif excedeu_limite:
         print("\n@@@ Operação Falhou, o Valor Digitado Ultrapassa o Limite Para realizar o Saque ! @@@");
 
-#    elif excedeu_saques:
-#        print("\n@@@ Operação Falhou, Foi excedido o número de Saque Permitido ! @@@");
+    elif excedeu_saques:
+        print("\n@@@ Operação Falhou, Foi excedido o número de Saque Permitido ! @@@");
 
     elif valor_de_saque > 0:
 
-        numero_saques.append(numero_saques)
         saldo -= valor_de_saque
         extrato += f"Saque:\t\tR$ {valor_de_saque:.2f}\n"
+        numero_saques += 1
         print("\n Saque Realizado com Sucesso ! ");
  
     else:
@@ -141,10 +136,9 @@ def main():
     saldo = 0
     limite = 500
     extrato = ""
-    numero_saques = []
+    numero_saques = 0
     usuarios = []
     contas = []
-    
     
     while True:
         opcao = menu()
@@ -158,11 +152,12 @@ def main():
             valor_de_saque = float(input("Informe o Valor do Saque: "))
     
             saldo, extrato = func_saque(
-                saldo=saldo,
-                valor_de_saque=valor_de_saque,
-                extrato=extrato,
-                limite=limite,
-                numero_saques=numero_saques
+                saldo = saldo,
+                valor_de_saque = valor_de_saque,
+                extrato = extrato,
+                limite = limite,
+                numero_saques = numero_saques,
+                limite_saques = LIMITE_SAQUES
             )
         
         elif opcao == "3":
@@ -179,11 +174,6 @@ def main():
                 
         elif opcao == "6":
             listar_contas(contas)
-
-        
-
-
-        
 
 
     else:
