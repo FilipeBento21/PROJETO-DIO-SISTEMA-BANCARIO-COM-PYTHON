@@ -1,6 +1,6 @@
 # 💰 Projeto: Sistema Bancário em Python | Bootcamp DIO
 
-##Este repositório contém o desenvolvimento de um sistema bancário simples e fictício, criado do zero como parte do **bootcamp de Python** da **DIO (Digital Innovation One)**.
+## Este repositório contém o desenvolvimento de um sistema bancário simples e fictício, criado do zero como parte do **bootcamp de Python** da **DIO (Digital Innovation One)**.
 
 O projeto tem como objetivo colocar em prática os **fundamentos da linguagem Python**, trabalhando com estruturas básicas e essenciais de programação.
 
