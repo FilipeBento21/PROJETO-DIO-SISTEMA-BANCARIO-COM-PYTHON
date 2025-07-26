@@ -1,4 +1,4 @@
-<h1># 💰 Projeto: Sistema Bancário em Python | Bootcamp DIO<h1>
+# 💰 Projeto: Sistema Bancário em Python | Bootcamp DIO
 
 <h2>Este repositório contém o desenvolvimento de um sistema bancário simples e fictício, criado do zero como parte do **bootcamp de Python** da **DIO (Digital Innovation One)**.
 
