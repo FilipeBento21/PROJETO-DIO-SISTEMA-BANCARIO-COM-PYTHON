@@ -1,15 +1,64 @@
-# PROJETO-DIO-SISTEMA-BANCARIO-COM-PYTHON
+<h1># 💰 Projeto: Sistema Bancário em Python | Bootcamp DIO<h1>
 
- PROJETO DO BOOTCAMP DE PYTHON DA DIO
+<h2>Este repositório contém o desenvolvimento de um sistema bancário simples e fictício, criado do zero como parte do **bootcamp de Python** da **DIO (Digital Innovation One)**.
 
-Olá, nesse projeto, tento com minhas habilidades iniciais e basícas mas os ensinamentos da aula implementar da melhor forma os meus conhecimentos de programação;
+O projeto tem como objetivo colocar em prática os **fundamentos da linguagem Python**, trabalhando com estruturas básicas e essenciais de programação.<h2>
 
-Temos agora funcionalidades comuns em bancos sendo executadas nesse programa.
+---
 
-Nele está sendo utilizadas:
+## 🧠 Conceitos Aplicados
 
-variáveis, funções, operações e muito mais;
+Durante o desenvolvimento do projeto, foram utilizados os principais conceitos iniciais de Python, incluindo:
 
-espero que gostem e o próximo passo é otimizar e cada vez mais melhorar o código;
+- 📦 **Variáveis** e **tipos de dados**
+- 🔁 **Estruturas de repetição** (`for`, `while`)
+- 🔀 **Condicionais** (`if`, `elif`, `else`)
+- 📋 **Tuplas**
+- 🧮 **Operações matemáticas**
+- 🧱 Organização de código com **funções**
 
-Obrigaddo !
+---
+
+## 💡 Funcionalidades do Sistema
+
+O sistema simula operações bancárias comuns como:
+
+- 📥 Depósito
+- 💸 Saque com limite
+- 📄 Extrato bancário
+- 🔒 Restrições de quantidade de saques
+- 🧾 Registro e exibição de transações
+
+Tudo isso feito com interface via **linha de comando**, de forma didática e direta.
+
+---
+
+## 🎯 Objetivo do Projeto
+
+✅ Praticar a lógica de programação com Python  
+✅ Fortalecer o uso de estruturas de código de **backend**  
+✅ Simular a construção de um sistema real, ainda que simples  
+✅ Melhorar a legibilidade, modularização e organização do código  
+✅ Estimular melhorias e novas funcionalidades a partir desta base
+
+---
+
+## 🔧 Próximos Passos
+
+- Refatoração e separação por módulos  
+- Implementar orientação a objetos  
+- Adicionar persistência de dados (em arquivos ou banco de dados)  
+- Criar uma interface gráfica ou via API  
+- Realizar validações e tratamento de erros
+
+---
+
+## 👨‍💻 Sobre o Autor
+
+Sou estudante de **Análise e Desenvolvimento de Sistemas**, em busca de evolução constante e aprendizado prático.  
+Este projeto representa mais um passo na minha jornada rumo ao domínio do desenvolvimento backend com Python e outras tecnologias.
+
+---
+
+**Obrigado por visitar!**  
+Sinta-se à vontade para clonar, testar e sugerir melhorias! 🚀
