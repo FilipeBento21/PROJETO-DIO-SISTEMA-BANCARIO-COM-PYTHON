@@ -495,7 +495,8 @@ elif menu == "📊 Extrato":
 
 # Tela: Novo Usuário
 elif menu == "👤 Novo Usuário":
-    st.markdown("## 👤 Cadastro de Usuário")
+    st.markdown("## <span style='color:#3b82f6;'>👤</span> Novo Usuário", unsafe_allow_html=True)
+    st.markdown("## <span style='color:#3b82f6;'>👤</span> Cadastro de Usuário", unsafe_allow_html=True)
     st.markdown("### *Preencha seus dados para começar*")
     st.markdown("<br>", unsafe_allow_html=True)
     
@@ -507,9 +508,38 @@ elif menu == "👤 Novo Usuário":
         
         st.markdown("<br>", unsafe_allow_html=True)
         
+        # CSS personalizado para o botão
+        st.markdown("""
+            <style>
+            /* Estiliza todos os botões de submit */
+            div.stButton > button:first-child {
+                background-color: #007bff; /* Azul mais vivo */
+                color: white;
+                border: none;
+                padding: 0.6rem 1.5rem;
+                border-radius: 8px;
+                font-size: 1rem;
+                font-weight: bold;
+                transition: 0.3s ease-in-out;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            /* Efeito hover */
+            div.stButton > button:first-child:hover {
+                background-color: #0056b3; /* Azul mais escuro */
+                transform: scale(1.03);
+            }
+
+            /* Efeito ao clicar */
+            div.stButton > button:first-child:active {
+                transform: scale(0.98);
+            }
+            </style>
+        """, unsafe_allow_html=True)
+
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
-            submitted = st.form_submit_button("✅ Cadastrar", use_container_width=True, type="primary")
+            submitted = st.form_submit_button("✅ Cadastrar", use_container_width=True)
         
         if submitted:
             if nome and cpf and data_nascimento and endereco:
